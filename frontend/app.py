@@ -15,6 +15,6 @@ if st.button('Predict'):
         'vib_y': vib_y,
         'vib_z': vib_z}
     
-    r = requests.post(API_URL, json=payload)
+    r = requests.post(f'{API_URL}/predict', json=payload)
     st.success(r.json())
 
