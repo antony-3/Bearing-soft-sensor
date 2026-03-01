@@ -18,9 +18,8 @@ def startup():
 @app.post("/predict")
 async def get_prediction(data:BearingInput):
     result = predict(data.vib_x, data.vib_y, data.vib_z)
-    return {'predicted_wear': result}
+    return {'predicted_wear': f'{result:.2f}'}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
     
