@@ -1,8 +1,10 @@
 import numpy as np
+import os
 import joblib
 from sklearn.linear_model import LinearRegression
 
-MODEL_PATH = "backend/model.joblib"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model.joblib")
 
 def train_model():
     np.random.seed(42)
