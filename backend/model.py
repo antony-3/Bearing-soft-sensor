@@ -18,5 +18,5 @@ def train_model():
 
 def predict(vib_x, vib_y, vib_z):
     model = joblib.load(MODEL_PATH)
-    X = np.array[[vib_x, vib_y, vib_z]]
+    X = np.array([[vib_x, vib_y, vib_z]])
     return float(model.predict(X)[0])
