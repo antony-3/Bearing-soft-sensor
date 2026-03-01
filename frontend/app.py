@@ -23,7 +23,7 @@ import requests
 
 API_URL = "https://bearing-soft-sensor.onrender.com"
 
-payload = {"x1": 1.0, "x2": 2.0, "x3": 3.0}
+payload = {"vib_x": 1.0, "vib_y": 2.0, "vib_z": 3.0}
 
 r = requests.post(f"{API_URL}/predict", json=payload)
 
