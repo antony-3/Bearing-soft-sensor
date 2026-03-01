@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = ""
+API_URL = "https://bearing-soft-sensor.onrender.com"
 
 st.title('Bearing Soft Sensor')
 
@@ -18,4 +18,3 @@ if st.button('Predict'):
     r = requests.post(API_URL, json=payload)
     st.success(r.json())
 
-    
